@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button:hover {
+    background: darkgreen;
+}
+
+.goat-card {
+    background: #eeeeee;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.expense-card {
+    background: #ffeaea;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.income-card {
+    background: #eaffea;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.goat-image {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#searchBox {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+#totalGoats,
+#totalExpense,
+#totalIncome {
+    font-weight: bold;
+    text-align: center;
+}
+
+#netProfit {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}

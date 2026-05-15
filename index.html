@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Goat Farm Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🐐 SP Goat Farm </h1>
+
+    <!-- Goat Form -->
+
+    <div class="form-box">
+
+        <input type="text"
+               id="tag"
+               placeholder="Goat Tag">
+
+        <input type="text"
+               id="breed"
+               placeholder="Breed">
+
+        <input type="text"
+               id="gender"
+               placeholder="Gender">
+
+        <input type="number"
+               id="age"
+               placeholder="Age">
+
+        <input type="file"
+               id="goatImage"
+               accept="image/*">
+
+        <button onclick="addGoat()">
+            Add Goat
+        </button>
+
+    </div>
+
+    <!-- Goat List -->
+
+    <h2>Goat List</h2>
+
+    <p id="totalGoats">
+        Total Goats: 0
+    </p>
+
+    <input type="text"
+           id="searchBox"
+           placeholder="Search goats..."
+           onkeyup="searchGoats()">
+
+    <div id="goatList"></div>
+
+    <hr>
+
+    <!-- Expenses -->
+
+    <h2>Farm Expenses</h2>
+
+    <div class="form-box">
+
+        <input type="text"
+               id="expenseTitle"
+               placeholder="Expense Title">
+
+        <input type="number"
+               id="expenseAmount"
+               placeholder="Expense Amount">
+
+        <button onclick="addExpense()">
+            Add Expense
+        </button>
+
+    </div>
+
+    <p id="totalExpense">
+        Total Expense: ₹0
+    </p>
+
+    <div id="expenseList"></div>
+
+    <hr>
+
+    <!-- Income -->
+
+    <h2>Farm Income</h2>
+
+    <div class="form-box">
+
+        <input type="text"
+               id="incomeTitle"
+               placeholder="Income Title">
+
+        <input type="number"
+               id="incomeAmount"
+               placeholder="Income Amount">
+
+        <button onclick="addIncome()">
+            Add Income
+        </button>
+
+    </div>
+
+    <p id="totalIncome">
+        Total Income: ₹0
+    </p>
+
+    <p id="netProfit">
+        Net Profit: ₹0
+    </p>
+
+    <button onclick="downloadPDF()">
+        Download Farm Report PDF
+    </button>
+
+    <br><br>
+
+    <button onclick="backupData()">
+        Backup Data
+    </button>
+
+    <br><br>
+
+    <input type="file"
+           id="restoreFile"
+           onchange="restoreData(event)">
+
+    <div id="incomeList"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
